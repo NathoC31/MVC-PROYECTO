@@ -49,6 +49,34 @@ namespace MVC_PROYECTO.Migrations
                     b.ToTable("Aula");
                 });
 
+            modelBuilder.Entity("MVC_PROYECTO.Models.Libro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AnioPublicacion")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Autor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Editorial")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Libro");
+                });
+
             modelBuilder.Entity("MVC_PROYECTO.Models.Maestro", b =>
                 {
                     b.Property<int>("Id")
