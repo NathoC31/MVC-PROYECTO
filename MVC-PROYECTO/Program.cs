@@ -1,4 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("UEESGContext") ?? throw new InvalidOperationException("Connection string 'UEESGContext' not found.");
+
+builder.Services.AddDbContext<UEESGContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
