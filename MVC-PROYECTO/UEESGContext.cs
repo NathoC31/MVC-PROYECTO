@@ -7,4 +7,5 @@ public class UEESGContext(DbContextOptions<UEESGContext> options) : DbContext(op
     public DbSet<MVC_PROYECTO.Models.Aula> Aula { get; set; } = default!;
 
     public DbSet<MVC_PROYECTO.Models.Libro> Libro { get; set; } = default!;
+    public DbSet<MVC_PROYECTO.Models.Estudiante> Estudiante { get; set; } = default!;
 }
