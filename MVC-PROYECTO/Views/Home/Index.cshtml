@@ -1,8 +1,87 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Sistema de Gestión Escolar";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Sistema de Gestión Escolar</h1>
+
+    <p class="lead">
+        Aplicación desarrollada con ASP.NET Core MVC, Entity Framework Core y SQL Server.
+    </p>
+
+    <hr />
+
+    <h3>Módulos del Sistema</h3>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5>Estudiantes</h5>
+                    <p>Gestión de estudiantes del sistema.</p>
+                    <a asp-controller="Estudiantes" asp-action="Index" class="btn btn-primary">
+                        Ingresar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5>Maestros</h5>
+                    <p>Administración de docentes.</p>
+                    <a asp-controller="Maestros" asp-action="Index" class="btn btn-success">
+                        Ingresar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5>Aulas</h5>
+                    <p>Control de aulas y capacidad.</p>
+                    <a asp-controller="Aulas" asp-action="Index" class="btn btn-warning">
+                        Ingresar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5>Libros</h5>
+                    <p>Gestión de libros académicos.</p>
+                    <a asp-controller="Libros" asp-action="Index" class="btn btn-danger">
+                        Ingresar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <h4>Integrantes del Grupo</h4>
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                Henry Borja - Entidad Estudiante
+            </li>
+
+            <li class="list-group-item">
+                Nathaly Cuasapaz - Entidad Maestro
+            </li>
+
+            <li class="list-group-item">
+                Pablo Loya - Entidad Aula
+            </li>
+
+            <li class="list-group-item">
+                Santiago Loya - Entidad Libro
+            </li>
+        </ul>
+    </div>
 </div>
